@@ -4,7 +4,7 @@ project(robotnik_msgs)
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
-find_package(catkin REQUIRED COMPONENTS actionlib_msgs std_msgs message_generation)
+find_package(catkin REQUIRED COMPONENTS actionlib_msgs std_msgs message_generation geometry_msgs)
 
 
 #######################################
@@ -40,6 +40,8 @@ add_message_files(DIRECTORY msg
     LaserMode.msg
     LaserStatus.msg
     SafetyModuleStatus.msg
+    PresenceSensor.msg
+    PresenceSensorArray.msg
 )
 
 ## Generate services in the 'srv' folder
@@ -81,6 +83,7 @@ generate_messages(
 DEPENDENCIES
    actionlib_msgs
    std_msgs  # Or other packages containing msgs
+   geometry_msgs
 )
 
 catkin_package(CATKIN_DEPENDS
