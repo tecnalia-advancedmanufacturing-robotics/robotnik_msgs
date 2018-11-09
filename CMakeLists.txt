@@ -54,6 +54,7 @@ add_service_files(
     get_mode.srv
     set_digital_output.srv
     set_odometry.srv
+    set_wheel_orientation.srv
     set_height.srv
     enable_disable.srv
     home.srv
